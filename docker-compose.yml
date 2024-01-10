@@ -1,0 +1,8 @@
+services:
+    mitsuba-ppg:
+        build: .
+        container_name: mitsuba-ppg
+        #command:
+        #ports:
+        volumes:
+            - ..:/code
