@@ -44,5 +44,5 @@ ENV PATH $MITSUBA_DIR/wrapper:$MITSUBA_DIR/dist:/usr/local/sbin:/usr/local/bin:/
 ENV LD_LIBRARY_PATH $MITSUBA_DIR/dist:
 
 # override files here, since the volume is mounted
-CMD cp -r /code/docker-ppg/mitsuba/* /code/mitsuba/ \
+CMD cp -r /code/docker/mitsuba/* /code/mitsuba/ \
     && tail -F anything
