@@ -1,6 +1,8 @@
 ## Practical Path Guiding - Docker
 
-This repo enables to run PPG in a docker container and is supposed to be added as a submodule to an existing repo.
+This repo enables to run PPG in a docker container and is supposed to be added as a submodule to an existing repo
+via: ```git submodule add https://github.com/cfreude/docker-ppg docker```
+
 At the start of the container all files in the ```mitsuba``` folder are copied to and override the corresponding files in the parent repo's ```mitsuba``` folder.
 
 ```
@@ -16,7 +18,7 @@ A advantage of mounting the repo as a volume it, that all files and changes are 
 1. Install [Docker](https://docs.docker.com/get-docker/) and start it.
 2. Open a terminal.
 3. Change to the root folder of this repository.
-4. Execute ```docker compose -f ./docker-ppg/docker-compose.yml up --build -d```
+4. Execute ```docker compose -f ./docker/docker-compose.yml up --build -d```
 
 Now the container is up and running, kept alive by the last CMD (```tail -F anything```) of the Dockerfile.
 Next we need to build Mitsuba inside the container.
