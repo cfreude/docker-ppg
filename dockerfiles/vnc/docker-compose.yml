@@ -1,0 +1,10 @@
+services:
+    misuba-ppg-vnc:
+        build: .
+        container_name: misuba-ppg-vnc
+        #command:
+        ports:
+            - 6080:80
+        volumes:
+            - /dev/shm:/dev/shm
+            - ../../../:/code

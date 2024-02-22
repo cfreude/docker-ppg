@@ -18,7 +18,9 @@ A advantage of mounting the repo as a volume it, that all files and changes are 
 1. Install [Docker](https://docs.docker.com/get-docker/) and start it.
 2. Open a terminal.
 3. Change to the root folder of this repository.
-4. Execute ```docker compose -f ./docker/docker-compose.yml up --build -d```
+4. Execute ...
+   1. for command-line: ```docker compose -f ./docker/dockerfiles/cmdline/docker-compose.yml up --build -d```
+   2. for VNC: ```docker compose -f ./docker/dockerfiles/vnc/docker-compose.yml up --build -d```
 
 Now the container is up and running, kept alive by the last CMD (```tail -F anything```) of the Dockerfile.
 Next we need to build Mitsuba inside the container.
@@ -27,7 +29,9 @@ For this one can use e.g. ```docker exec``` or ```docker attach```.
 #### Build and Run
 
 1. Open a terminal.
-2. Execute ```docker exec -it mitsuba-ppg bash``` to open an interactive shell inside the docker container.
+2. Execute ...
+   1. for command-line: ```docker exec -it misuba-ppg-cmdline bash``` to open an interactive shell inside the docker container.
+   1. for VNC: [http://localhost:6080/](http://localhost:6080/)
 3. Execute ```cd mitsuba/ && ./build.sh``` to build Mitsuba.
 4. Execute ```./dist/mitsuba``` to test if Mitsuba runs.
 

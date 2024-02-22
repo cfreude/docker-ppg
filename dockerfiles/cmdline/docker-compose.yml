@@ -1,0 +1,8 @@
+services:
+    misuba-ppg-cmdline:
+        build: .
+        container_name: misuba-ppg-cmdline
+        #command:
+        #ports:
+        volumes:
+            - ../../../:/code
