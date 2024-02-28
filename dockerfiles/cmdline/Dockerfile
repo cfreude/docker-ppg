@@ -29,9 +29,14 @@ RUN apt-get update \
     libpcrecpp0v5 \
     libeigen3-dev \
     libfftw3-dev \
+    openexr \
+    python3 \
+    python3-pip \
     && apt-get clean \
     && apt-get autoclean \
     && apt-get autoremove
+
+#RUN pip3 install imageio
 
 FROM stage1
 
